@@ -1,16 +1,35 @@
-﻿using System.Threading.Tasks;
-using Team.Practice.Domain.Interfaces;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using MongoDB.Bson;
 using Team.Practice.Domain.Models;
+using Team.Practice.Infra.Data.Repository.Interfce;
 
 namespace Team.Practice.Infra.Data.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {
-        //TODO: Create ctor with dependence context
-
-        public Task CreateAsync(Customer customer)
+        public Task AddAsync(Customer obj)
         {
-            //TODO: Create method async
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Customer>> GetAllAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Customer> GetByIdAsync(ObjectId id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task RemoveAsync(ObjectId id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task UpdateAsync(Customer obj)
+        {
             throw new System.NotImplementedException();
         }
 

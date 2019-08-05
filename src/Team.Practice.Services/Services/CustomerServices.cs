@@ -1,7 +1,7 @@
 ﻿
 using System.Threading.Tasks;
-using Team.Practice.Domain.Interfaces;
 using Team.Practice.Domain.Models;
+using Team.Practice.Infra.Data.Repository.Interfce;
 using Team.Practice.Services.Interfaces;
 
 namespace Team.Practice.Services.Services
@@ -26,7 +26,7 @@ namespace Team.Practice.Services.Services
         public async Task CreateAsync(Customer customer)
         {
             if (!IsValid(customer)) return;
-            await _customerRepository.CreateAsync(customer);
+            await _customerRepository.AddAsync(customer);
         }       
 
         public void Dispose()
